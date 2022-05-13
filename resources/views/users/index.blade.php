@@ -5,7 +5,7 @@
 {{--                {{ __('Users') }}--}}
             </h2>
             <x-button class="">
-{{--                <a href="{{ route('users.create') }}">{{ __('Create') }}</a>--}}
+                <a href="{{ route('users.create') }}">{{ __('Create') }}</a>
             </x-button>
         </div>
     </x-slot>
