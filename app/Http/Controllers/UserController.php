@@ -19,10 +19,10 @@ class UserController extends Controller
     public function index()
     {
         $users = User::all();
+//        $users = User::withTrashed()->get();
 //        $users = DB::select('select * from users where name = :name', ['name' => 'Richard Vachula']);
 //        $users = User::orderBy('name')->get();
 //        $users = User::paginate(5);
-//        $users = User::withTrashed()->get();
 
 //        $deleted = DB::delete('delete from users');
 
