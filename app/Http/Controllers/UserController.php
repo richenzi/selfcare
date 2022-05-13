@@ -9,6 +9,7 @@ use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use Facades\App\Services\UserService;
@@ -18,9 +19,19 @@ class UserController extends Controller
     public function index()
     {
         $users = User::all();
+//        $users = DB::select('select * from users where name = :name', ['name' => 'Richard Vachula']);
 //        $users = User::orderBy('name')->get();
 //        $users = User::paginate(5);
 //        $users = User::withTrashed()->get();
+
+//        $deleted = DB::delete('delete from users');
+
+//        DB::statement('drop table users');
+
+//        $affected = DB::update(
+//            'update users set votes = 100 where name = ?',
+//            ['Anita']
+//        );
 
         return view('users.index', ['users' => $users]);
     }
